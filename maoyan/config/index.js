@@ -10,7 +10,18 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+     proxyTable: {
+      // 只要是movie请求全部转发到m.maizuo这个服务器上
+          '/movie': {
+              target: 'http://m.maoyan.com',
+              host: 'm.maoyan.com',
+              changeOrigin:true,
+              // pathRewrite: {
+              //     '^/v4/api': '/v4/api'
+              //   }
+          }
+    },
+
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
