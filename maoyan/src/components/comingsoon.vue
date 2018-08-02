@@ -22,11 +22,15 @@
 
 <style type="text/css">
 	
+<<<<<<< HEAD
 	div{
 			
 			width:100%;a
 			height:100%;
 		}
+=======
+	
+>>>>>>> 5a8e53ea4e9b0ee83e1c93362c959df42e53fabf
 
 </style>
 

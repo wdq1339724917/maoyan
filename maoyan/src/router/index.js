@@ -40,10 +40,10 @@ export default new Router({
       		path: 'comingsoon',
       		component: comingsoon
       	},
-      /*	{
+      	{
       		path:'/film',
       		redirect: "/film/nowplaying",
-      	}*/
+      	}
       ]
     },
     {
