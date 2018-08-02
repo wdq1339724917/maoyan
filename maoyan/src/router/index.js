@@ -12,6 +12,16 @@ import comingsoon from "../components/comingsoon.vue"
 import navbar from "../components/common/navbar.vue"
 import footerbar from "../components/common/footerbar.vue"
 
+import login from "../views/login"
+import register from "../views/register"
+
+//登陆注册
+
+
+
+
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -30,10 +40,10 @@ export default new Router({
       		path: 'comingsoon',
       		component: comingsoon
       	},
-      /*	{
+      	{
       		path:'/film',
       		redirect: "/film/nowplaying",
-      	}*/
+      	}
       ]
     },
     {
@@ -47,6 +57,14 @@ export default new Router({
     {
       path: '/detail',
       component: detail
+    },
+    {
+        path:"/login",
+        component:login
+    },
+    {
+      path:"/register",
+      component:register
     },
     {
 	  path: '*',
