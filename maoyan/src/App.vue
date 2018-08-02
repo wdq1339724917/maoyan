@@ -10,13 +10,12 @@
 </template>
 
 <script>
-<<<<<<< HEAD
+
   import login from "./views/login"
- 
-=======
+
   import navbar from "./components/common/navbar.vue"
   import footerbar from "./components/common/footerbar.vue"
->>>>>>> 5a8e53ea4e9b0ee83e1c93362c959df42e53fabf
+
 export default {
   name: 'App',
   data(){
@@ -43,15 +42,15 @@ export default {
      
 
     }
-<<<<<<< HEAD
+
  
  a{
   text-decoration: none;
   color:black;
  }
-=======
+
     li{
       list-style: none;
     }
->>>>>>> 5a8e53ea4e9b0ee83e1c93362c959df42e53fabf
+
 </style>

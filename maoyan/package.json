@@ -14,11 +14,8 @@
     "axios": "^0.18.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-<<<<<<< HEAD
     "axios": "^0.18.0",
     "vue-swipe": "^2.4.0",
-=======
->>>>>>> 5a8e53ea4e9b0ee83e1c93362c959df42e53fabf
     "vuex": "^3.0.1"
   },
   "devDependencies": {
