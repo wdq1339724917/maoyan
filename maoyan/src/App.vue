@@ -1,11 +1,17 @@
 <template>
-    <div id="app">
-     
-        <router-view></router-view>
+    <div id="app">        
+        <navbar></navbar>
+        <section>
+           <router-view></router-view>  
+        </section>
+        <footerbar></footerbar>
+
     </div>
 </template>
 
 <script>
+  import navbar from "./components/common/navbar.vue"
+  import footerbar from "./components/common/footerbar.vue"
 export default {
   name: 'App',
   data(){
@@ -13,10 +19,14 @@ export default {
 
     }
   },
+  components:{
+    navbar,
+    footerbar,
+  },
 }
 </script>
 
-<style>
+<style lang="scss">
   *{
       padding:0;
       margin:0;
@@ -26,5 +36,8 @@ export default {
       height:100%;
       background:#ebebeb;
 
+    }
+    li{
+      list-style: none;
     }
 </style>

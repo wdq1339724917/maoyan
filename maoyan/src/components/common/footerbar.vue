@@ -1,7 +1,22 @@
 <template>
 	<div>
-		footerbar
+		<ul>
+			<li>
+				<i class="iconfont icon-video"></i>
+				<span>电影</span>
+			</li>
+			<li>
+				<i class="iconfont icon-pic"></i>
+				<span>影院</span>
+			</li>
+			<li>
+				<i class="iconfont icon-account"></i>
+				<span>我的</span>
+			</li>
+		</ul>
+
 	</div>
+	
 </template>
 
 
@@ -20,12 +35,38 @@
 </script>
 
 
-<style type="text/css">
-	
+<style type="text/css" scoped lang="scss">
 	div{
-			
+		width:100%;
+		height:50px;
+		position:fixed;
+		bottom:1px;
+
+		ul{
+
 			width:100%;
-			height:100%;
+			height:50px;
+			display: flex;
+			
+			li{
+				width:100%;
+				height:50px;
+				background: #fff;				
+				text-align: center;
+				i{
+					margin-top:5px;
+					display: block;
+					font-size: 20px;
+				}
+				span{
+					
+					display: block;
+					margin-top:5px;
+					font-size:12px;
+					color:#6b6b6b;
+				}
+			}
 		}
+	}
 
 </style>
