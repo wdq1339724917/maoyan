@@ -6,6 +6,8 @@
 </template>
 
 <script>
+  import login from "./views/login"
+ 
 export default {
   name: 'App',
   data(){
@@ -24,7 +26,13 @@ export default {
     }
     html,body{
       height:100%;
-      background:#ebebeb;
+      background: #f8f8f8;
+     
 
     }
+ 
+ a{
+  text-decoration: none;
+  color:black;
+ }
 </style>
