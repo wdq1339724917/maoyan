@@ -1,29 +1,29 @@
 <template>
 	<div class="box">
 		<ul>
-			<li v-for="data in datalist" @click="toDetail()">
+			<li v-for="data in datalist" @click="toDetail(data.id)" :key="data.id">
 				<div class="pic">
 					<img :src="data.img" >
 				</div>
-				<div class="detail-main">
-				 	<div class="title">
-				 		<span class="nm">{{data.nm}}</span>
-					 	<!-- <span class="version">{{data.version}}</span> -->
-					 </div>
-					<div class="score">
-						<span class="scoresuffix" >观众评</span>
-						<span class="grade">{{data.sc}}</span>
-					</div>	
-					<div class="actor">
-						<div class="star">主演:{{data.star}}</div>
-						<div class="showinfo">{{data.showInfo}}</div>
+					<div class="detail-main">
+					 	<div class="title">
+					 		<span class="nm">{{data.nm}}</span>
+						 	<!-- <span class="version">{{data.version}}</span> -->
+						 </div>
+						<div class="score">
+							<span class="scoresuffix" >观众评</span>
+							<span class="grade">{{data.sc}}</span>
+						</div>	
+						<div class="actor">
+							<div class="star">主演:{{data.star}}</div>
+							<div class="showinfo">{{data.showInfo}}</div>
+						</div>
 					</div>
-				</div>
-				<div class="botton-block">
-					<div class="button-normal" @click="handelClick" isShow="!isShow">
-						<span class="botton">购买</span>
+					<div class="botton-block">
+						<div class="button-normal" @click="handelClick" isShow="!isShow">
+							<span class="botton">购买</span>
+						</div>
 					</div>
-				</div>
 			</li>
 		</ul>
 	</div>
@@ -47,8 +47,8 @@
 			handelClick(){
 
 			},
-			toDetail(){
-				router.push('/detail');
+			toDetail(data){
+				router.push(`/detail/${data}`);
 			}
 		},
 		mounted(){

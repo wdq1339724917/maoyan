@@ -1,18 +1,21 @@
 <template>
 	<div>
 		<ul>
-			<li>
+			<router-link to="/film" tag="li" activeClass="changColor">
 				<i class="iconfont icon-video"></i>
-				<span>电影</span>
-			</li>
-			<li>
+				<!-- <span>电影</span> -->
+				电影
+			</router-link>
+			<router-link to="/cinema" tag="li" activeClass="changColor">
 				<i class="iconfont icon-pic"></i>
-				<span>影院</span>
-			</li>
-			<li>
+				<!-- <span>影院</span> -->
+				影院
+			</router-link>
+			<router-link to="/login" tag="li" activeClass="changColor">
 				<i class="iconfont icon-account"></i>
-				<span>我的</span>
-			</li>
+				<!-- <span>我的</span> -->
+				我的
+			</router-link>
 		</ul>
 
 	</div>
@@ -67,6 +70,10 @@
 				}
 			}
 		}
+		.changColor{
+			color: #f03d37;
+		}
+	
 	}
 
 </style>
