@@ -1,11 +1,10 @@
 <template>
 	<div>
-		<div class="zzc"></div>
 		<p>
 			近期最受期待
 		</p>
 		<div class="lb">
-			
+			<div class="zzc"></div>
 			<ul>
 				<li v-for="data in datalist">
 					<img :src="data.img"/>
@@ -15,13 +14,20 @@
 				</li>
 			</ul>
 		</div>
-		<!-- <div>
-			<ul v-for="data in datalista">
-				<li>
-					<img :src=""/>
+		<div class="two">
+			<ul>
+				<li v-for="data in datalista">
+					<img :src="data.img"/>
+					<ul class="xlb">
+						<li class="boa">{{data.nm}}</li>
+						<li class="bob">点映评<span>{{data.sc}}</span></li>
+						<li class="boc">主演：{{data.star}}</li>
+						<li class="bod">{{data.rt}}上映</li>
+					</ul>
+					<div class="ys">预售</div>
 				</li>
 			</ul>
-		</div> -->
+		</div>
 	</div>
 </template>
 
@@ -88,16 +94,9 @@
 
 			width: 100%;
 			height: 100%;
-			background: #fff;
+			background: #f8f8f8;
 			p{
-				margin-top: 20px;
-			}
-			.zzc{
-				background: #fff;
-				height: 5px;
-				position: fixed;
-				top: 243px;
-				z-index: 10;
+				margin-top: 100px;
 			}
 			.lb{
 				/* width: 980px; */
@@ -106,11 +105,20 @@
 				height: 100%; */
 				height: 17px;
 				margin-top: 10px;
+				position: relative;
+				.zzc{
+					background: #f8f8f8;
+					height: 27px;
+					position: absolute;
+					top: 151px;
+					z-index: 10;
+			}
 				/* height: 157px; */
 				ul{/* width: 980px; 
 					 height: 216px; */
 					/* width: 100%;
 					height: 100%; */
+					margin-top: 10px;
 					overflow: auto;
 					display: flex;
 					padding-bottom: 20px;
@@ -158,8 +166,83 @@
 				}
 
 			}
+			.two{
+				margin-top: 185px;
+				ul{
+					li{
+						display: flex;
+						width: 350px;
+						height: 114px;
+						margin: auto;
+						border-bottom: 1px solid #ccc;
+						img{
+							width: 64px;
+							height: 90px;
+							margin: 12px;
+							margin-left: 0;
+						}
+						.xlb{
+							width: 202px;
+							height: 88px;
+							.boa{
+								width: 202px;
+								height: 24px;
+								font-size: 17px;
+								font-weight: bold;
+								margin-top: 12px;
+								border-bottom: 0;
+							}
+							.bob{
+								width: 202px;
+								height: 17px;
+								color: #666666;
+								border-bottom: 0;
+								span{
+									color:#faaf00;
+									font-size: 15px;
+									display: inline-block;
+									margin-left: 5px;
+								}
+							}
+							.boc{
+								display: inline-block;
+								width: 202px;
+								height: 15px;
+								font-size: 12px;
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow:ellipsis;
+								color: #2e2e2e;
+								border-bottom: 0;
+							}
+							.bod{
+								width: 202px;
+								height: 15px;
+								font-size: 13px;
+								color: #666;
+								border-bottom: 0;
+							}
+
+						}
+						.ys{
+							display: inline-block;
+							width: 47px;
+							height: 27px;
+							background: #3c9fe6;
+							border-radius: 4px;
+							color: #fff;
+							font-size: 12px;
+							line-height: 27px;
+							text-align: center;
+							margin: auto 0;
+							border-bottom: 1px solid #ccc;
+						}
+					}
+				}
+			}
 
 		}
+		
 
 
 
