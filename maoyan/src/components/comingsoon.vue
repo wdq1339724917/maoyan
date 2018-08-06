@@ -6,7 +6,7 @@
 		<div class="lb">
 			<div class="zzc"></div>
 			<ul>
-				<li v-for="data in datalist">
+				<li v-for="data in datalist" @click="toDetail(data.id)" :key="data.id">
 					<img :src="data.img"/>
 					<span>{{data.wish}}人想看</span>
 					<h5>{{data.nm}}</h5>
@@ -16,7 +16,7 @@
 		</div>
 		<div class="two">
 			<ul>
-				<li v-for="data in datalista">
+				<li v-for="data in datalista" @click="toDetail(data.id)" :key="data.id">
 					<img :src="data.img"/>
 					<ul class="xlb">
 						<li class="boa">{{data.nm}}</li>
@@ -44,6 +44,13 @@
 				 datalista:[]
 			}
 		},
+		methods:{
+
+			toDetail(data){
+				router.push(`/detail/${data}`);
+			}
+
+		},
 		mounted(){
 			axios.get("/ajax/mostExpected?ci=65&limit=10&offset=0&token=").then(
 				res=>{
@@ -66,7 +73,7 @@
 
 			axios.get("/ajax/comingList?ci=65&token=&limit=10").then(
 				res=>{
-					console.log(res.data)
+					console.log(res.data);
 					this.datalista =res.data.coming
 
 
@@ -76,7 +83,7 @@
 						//console.log(pic)
 					
 
-					};
+					}
 				})
 
 			}
